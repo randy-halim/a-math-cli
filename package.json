@@ -1,0 +1,26 @@
+{
+  "name": "a-math-cli",
+  "version": "1.0.0",
+  "description": "my AP CSP project which is literally a math quiz that you take in the command line",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randy-halim/a-math-cli.git"
+  },
+  "author": "Randy H <randy.halim@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/randy-halim/a-math-cli/issues"
+  },
+  "homepage": "https://github.com/randy-halim/a-math-cli#readme",
+  "bin": {
+    "maths": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "inquirer": "^7.1.0"
+  }
+}
