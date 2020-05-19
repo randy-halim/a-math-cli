@@ -13,3 +13,13 @@ const chalk = require('chalk');
 const log = console.log;
 
 log(chalk.magentaBright.bold('hello user. today we will be playing a simple game of ' + chalk.redBright.underline.bold('maths') + '.'));
+
+inq.prompt([
+    {
+        type: 'input',
+        name: 'answer',
+        message: 'what is 1+1?'
+    }
+]).then((answers) => {
+    console.log(`you said ${answers.answer}`);
+});
