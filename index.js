@@ -92,6 +92,7 @@ const generateMathEquation = (x, y) => {
 };
 
 const askQuestion = async () => {
+    rerollRange();
     let question = generateMathEquation(generateRandomNumber(randomSeed.x, randomSeed.y), generateRandomNumber(randomSeed.x, randomSeed.y));
     questionNumber++;
     yellowLog(`you are on question ${questionNumber} \nand you have ${score} points with ${lives} lives remaining.`);
