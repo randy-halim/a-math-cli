@@ -1,4 +1,5 @@
 console.clear();
+
 const prompts = require('prompts');
 const chalk = require('chalk');
 
