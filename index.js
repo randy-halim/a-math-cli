@@ -100,27 +100,12 @@ const askQuestion = async () => {
             type: 'number',
             name: 'userAnswer',
             message: `what is ${question.question}?`,
-            hint: 'to quit: hit up arrow to input -Infinity, then press enter.'
-        },
-        {
-            type: (prev) => Number(isFinite(prev)) ? false : 'confirm',
-            name: 'confirm',
-            message: 'are you sure?',
         }
     ]);
     if (res.userAnswer === question.ans) {
         console.clear();
         greenLog('that\'s the right answer! \n+5 points \n\n');
         score += 10;
-    }
-    else if (res.confirm) {
-        yellowLog('it seems that you wanted to quit.');
-        lives = 0;
-    }
-    else if (!res.confirm) {
-        console.clear();
-        questionNumber--;
-        return;
     }
     else {
         console.clear();
