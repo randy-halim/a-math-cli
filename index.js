@@ -1,7 +1,26 @@
+/*
+    AP INFORMATION:
+        AP ID: 0X8UV3ZZ
+        INITIALS: RMH
+    
+    CREDITS:
+        Prompts v2.3.2: NodeJS package to build prompts
+            Author: https://github.com/terkelg
+            Link: https://yarnpkg.com/package/prompts
+        Chalk v4.0.0: NodeJS package to stylize the terminal
+            Author: https://github.com/chalk
+            Link: https://yarnpkg.com/package/chalk
+        Yarn v1.22.4: NodeJS package dependacy manager
+            Author: https://github.com/yarnpkg
+            Link: https://yarnpkg.com
+        NodeJS v12.16.3: JavaScript runtime based on Chrome v8 Engine
+            Link: https://nodejs.org/en/
+*/
+
 console.clear();
 
-const prompts = require('prompts');
-const chalk = require('chalk');
+const prompts = require('prompts'); // NodeJS Prompts package
+const chalk = require('chalk'); // NodeJS Chalk package
 
 let questionNumber = 0;
 let lives = 5;
