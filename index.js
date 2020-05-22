@@ -176,41 +176,44 @@ const initial = async () => {
                 console.error('no operations! exiting with code 1');
                 process.exit(1);
             }
-            switch (res.difficulty) {
-                case 1:
-                    // super easy
-                    randomSeed.x = generateRandomNumber(0, 5);
-                    randomSeed.y = generateRandomNumber(6, 10);
-                    break;
-                case 2:
-                    // easy
-                    randomSeed.x = generateRandomNumber(0, 10);
-                    randomSeed.y = generateRandomNumber(11, 20);
-                    break;
-                case 3:
-                    // medium
-                    randomSeed.x = generateRandomNumber(0, 15);
-                    randomSeed.y = generateRandomNumber(16, 30);
-                    break;
-                case 4:
-                    // hard
-                    randomSeed.x = generateRandomNumber(0, 20);
-                    randomSeed.y = generateRandomNumber(21, 40);
-                    break;
-                case 5:
-                    // super hard
-                    randomSeed.x = generateRandomNumber(0, 25);
-                    randomSeed.y = generateRandomNumber(26, 50);
-                    break;
-                default:
-                    // uhh...
-                    console.error('nope, idk what happened.');
-                    process.exit(1);
-            }
             return res;
         });
     }
 };
+
+const rerollRange = () => {
+    switch (config.difficulty) {
+        case 1:
+            // super easy
+            randomSeed.x = generateRandomNumber(0, 5);
+            randomSeed.y = generateRandomNumber(6, 10);
+            break;
+        case 2:
+            // easy
+            randomSeed.x = generateRandomNumber(0, 10);
+            randomSeed.y = generateRandomNumber(11, 20);
+            break;
+        case 3:
+            // medium
+            randomSeed.x = generateRandomNumber(0, 15);
+            randomSeed.y = generateRandomNumber(16, 30);
+            break;
+        case 4:
+            // hard
+            randomSeed.x = generateRandomNumber(0, 20);
+            randomSeed.y = generateRandomNumber(21, 40);
+            break;
+        case 5:
+            // super hard
+            randomSeed.x = generateRandomNumber(0, 25);
+            randomSeed.y = generateRandomNumber(26, 50);
+            break;
+        default:
+            // uhh...
+            console.error('nope, idk what happened.');
+            process.exit(1);
+    }
+}
 
 const body = async () => {
     await initial();
